@@ -1,0 +1,9 @@
+default = "eu-1"
+
+[[location]]
+name = "eu-1"
+description = "Germany, France, Austria..."
+
+[[location]]
+name = "eu-2"
+description = "Finland, Sweden, Norway, Estonia..."

@@ -1,0 +1,12 @@
+default = "node-2"
+
+[[plan]]
+name = "node-1"
+arch = "x86"
+description = "vCPU: 1, RAM: 2 GB, SSD: 20 GB"
+filter = ["Location=eu-1"]
+
+[[plan]]
+name = "node-2"
+arch = "x86"
+description = "vCPU: 2, RAM: 2 GB, SSD: 40 GB"

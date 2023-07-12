@@ -1,0 +1,41 @@
+default = "debian-12"
+
+[[os]]
+name = "debian-12"
+description = "Linux, Debian 12, Bookworm"
+
+[[os]]
+name = "debian-11"
+description = "Linux, Debian 11, Bullseye"
+
+[[os]]
+name = "ubuntu-18.04"
+description = "Linux, Ubuntu 18.04"
+
+[[os]]
+name = "ubuntu-20.04"
+description = "Linux, Ubuntu 20.04"
+
+[[os]]
+name = "ubuntu-22.04"
+description = "Linux, Ubuntu 22.04"
+
+[[os]]
+name = "fedora-36"
+description = "Linux, Fedora 36"
+
+[[os]]
+name = "centos-stream-8"
+description = "Linux, CentOS Stream 8"
+
+[[os]]
+name = "centos-stream-9"
+description = "Linux, CentOS Stream 9"
+
+[[os]]
+name = "rocky-8"
+description = "Linux, Rocky 8"
+
+[[os]]
+name = "rocky-9"
+description = "Linux, Rocky 9"
