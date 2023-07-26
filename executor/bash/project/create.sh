@@ -16,7 +16,7 @@ root_pubkey=$(carburator get env "${SERVICE_PROVIDER_NAME}_ROOT_PUBLIC_SSKEY" \
     -s "$SERVICE_PROVIDER_NAME" -p "$SERVICE_PROVIDER_NAME.env")
 
 if [[ -z $root_pubkey ]]; then
-    root_pubkey=$(carburator get env REGISTER_USER_PUBLIC_SSKEY_0 \
+    root_pubkey=$(carburator get env REGISTER_ROOT_PUBLIC_SSKEY_0 \
         -p .exec.env) || exit 120
 
     carburator put env "${SERVICE_PROVIDER_NAME}_ROOT_PUBLIC_SSKEY" "$root_pubkey" \
