@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-carburator print terminal info "Invoking $SERVICE_PROVIDER_NAME service provider..."
+carburator log info "Invoking $SERVICE_PROVIDER_NAME service provider..."
 
 # Provisioner defined with a parent command flag
 provisioner="$PROVISIONER_NAME"
@@ -41,7 +41,7 @@ for (( i=0; i<len; i++ )); do
         # Say something.
         node=$(carburator get json "nodes.$i.hostname" string -p .exec.json)
         if [[ -n $node ]]; then
-            carburator print terminal info "Setting initilization delay for $node"
+            carburator log info "Setting initilization delay for $node"
         fi
 
         # Alter node toml to have the available time
@@ -56,7 +56,7 @@ done
 ###
 # Private networking
 #
-carburator print terminal info \
+carburator log info \
     "Creating private networks for $SERVICE_PROVIDER_NAME nodes..."
 
 carburator provisioner request \

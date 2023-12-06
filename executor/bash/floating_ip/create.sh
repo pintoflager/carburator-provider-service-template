@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-carburator print terminal info "Invoking $SERVICE_PROVIDER_NAME service provider..."
+carburator log info "Invoking $SERVICE_PROVIDER_NAME service provider..."
 
 # Provisioner defined with a parent command flag
 provisioner="$PROVISIONER_NAME"

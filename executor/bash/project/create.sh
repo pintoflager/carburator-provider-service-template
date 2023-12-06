@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-carburator print terminal info "Invoking $SERVICE_PROVIDER_NAME service provider..."
+carburator log info "Invoking $SERVICE_PROVIDER_NAME service provider..."
 
 # Provisioner defined with a parent command flag
 provisioner="$PROVISIONER_NAME"
@@ -25,7 +25,7 @@ if [[ -z $root_pubkey ]]; then
 fi
 
 if [[ -z $root_pubkey ]]; then
-    carburator print terminal error \
+    carburator log error \
         "Unable to find path to root public SSH key from .exec.env"
     exit 120
 fi
@@ -42,4 +42,4 @@ carburator provisioner request \
         --provisioner "$provisioner" \
         --key-val "ROOT_SSH_PUBKEY=$root_pubkey" || exit 120
 
-carburator print terminal success "$SERVICE_PROVIDER_NAME project created."
+carburator log success "$SERVICE_PROVIDER_NAME project created."

@@ -2,7 +2,7 @@
 
 # To prevent unwanted behaviour in case of a bad package config.
 if [[ $1 == "server" ]]; then
-    carburator print terminal error \
+    carburator log error \
         "Service providers register only on client nodes. Package configuration error."
     exit 120
 fi
@@ -16,7 +16,7 @@ if carburator has json service_provider.secrets -p .exec.json; then
         if ! carburator has secret "$secret" --user root; then
             # ATTENTION: We know only one secret is present. Otherwise
             # prompt texts should be adjusted accordingly.
-            carburator print terminal warn \
+            carburator log warn \
                 "Could not find secret containing $SERVICE_PROVIDER_NAME cloud API token."
             
             carburator prompt secret "$SERVICE_PROVIDER_NAME cloud API key" \
